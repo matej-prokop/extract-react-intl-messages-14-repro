@@ -1,0 +1,77 @@
+{
+  "name": "extract-react-intl-messages-14-repro",
+  "version": "1.0.0",
+  "description": "extract-react-intl-messages-14-repro",
+  "peerDependencies": {
+    "styled-components": ">=3.0.0",
+    "react": ">=16.2.0",
+    "react-dom": ">=16.2.0",
+    "react-intl": ">=2.4.0"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint '{src}/**/*.js' src --color",
+    "extractMessages": "extract-react-intl-messages -l=en -o translations 'src/**/*.js'"
+  },
+  "author": "Matej Prokop <prokop.address@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-info": "^3.3.15",
+    "@storybook/addon-knobs": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-react-intl": "^2.4.0",
+    "babel-plugin-react-intl-auto": "^1.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "eslint-config-react-app": "^2.1.0",
+    "extract-react-intl-messages": "^0.8.2",
+    "husky": "^0.14.3",
+    "jest-styled-components": "^5.0.0",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.11.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0",
+    "react-scripts": "^1.1.1",
+    "rimraf": "^2.6.2",
+    "rollup": "0.57.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^7.1.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.2.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-uglify": "^3.0.0",
+    "styled-components": "^3.2.3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "polished": "^1.9.2",
+    "prop-types": "^15.6.1",
+    "qrcode.react": "^0.8.0",
+    "ramda": "^0.25.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  }
+}
